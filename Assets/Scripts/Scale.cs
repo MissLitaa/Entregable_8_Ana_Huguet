@@ -5,13 +5,15 @@ using UnityEngine;
 public class Scale : MonoBehaviour
 
 {
+    //Valor de reset del cubo. En Start lo establecemos.
     private Vector3 ResetValue;
 
     private void Start()
     {
         ResetValue = Vector3.one;
     }
-    
+
+    //Transformar la escala +1 en todos los ejes.
     public void ScaleBlock(float value)
     {
             transform.localScale = value * Vector3.one ;
@@ -22,6 +24,7 @@ public class Scale : MonoBehaviour
         transform.localScale = ResetValue; 
     }
 
+    //Visibilidad controlada por el valor de Scrollbar.
     public void Visibility(float value)
     {
 
